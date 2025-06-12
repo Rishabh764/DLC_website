@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutorials</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 20px;
+      width: 600px;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Digital Tutorials</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="chatbot.html">AI Chat</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="card-container">
+    <div class="card">
+      <h2>WhatsApp</h2>
+      <video controls src="watsapp.mp4" onclick="handleVideoClick('WhatsApp')"></video>
+    </div>
+    <div class="card">
+      <h2>Paytm</h2>
+      <video controls src="paytm.mp4" onclick="handleVideoClick('Paytm')"></video>
+    </div>
+    <div class="card">
+      <h2>Google Maps</h2>
+      <video controls src="maps1.mp4" onclick="handleVideoClick('Google Maps')"></video>
+    </div>
+  </main>
+
+  <script>
+    // Called when any video is clicked
+    function handleVideoClick(name) {
+      alert('Now playing: ' + name + ' tutorial');
+    }
+
+    // Log message on page load
+    window.onload = function () {
+      console.log("Tutorials page loaded successfully.");
+    };
+  </script>
+</body>
+</html>
